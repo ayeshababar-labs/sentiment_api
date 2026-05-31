@@ -1,0 +1,41 @@
+# Virtual environment
+venv/
+sapi_venv/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Model artifacts
+model/*.pkl
+model/*.joblib
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Jupyter (if you experiment in notebooks)
+.ipynb_checkpoints/
+*.ipynb
