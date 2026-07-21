@@ -39,3 +39,4 @@ Thumbs.db
 # Jupyter (if you experiment in notebooks)
 .ipynb_checkpoints/
 *.ipynb
+.kilo/kilo.jsonc
