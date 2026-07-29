@@ -5,11 +5,7 @@ from app.model import load_model
 
 app = Flask(__name__)
 
-# Define model path relative to the project root
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, 'model', 'sentiment_model.pkl')
-
-model = load_model(MODEL_PATH)  # load once at startup
+model = load_model()  # load once at startup
 
 @app.route("/health", methods=["GET"])
 def health():
