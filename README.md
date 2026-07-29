@@ -6,8 +6,8 @@ An integrated system comprising a specialized sentiment analysis API and an agen
 
 ### 1. Sentiment Analysis API
 A production-ready microservice that provides sentiment classification.
-- **Core:** Built with Flask and Scikit-Learn.
-- **Model:** A trained pipeline serialized as `sentiment_model.pkl`.
+- **Core:** Built with Flask and HuggingFace Transformers.
+- **Model:** DistilBERT fine-tuned on SST-2 (`distilbert-base-uncased-finetuned-sst-2-english`).
 - **Deployment:** Containerized via Docker and scalable using Gunicorn.
 
 ### 2. Agentic Layer
@@ -20,7 +20,6 @@ An implementation of AI agents that treat the Sentiment API as an external tool.
 - `app/`: Model loading and prediction logic.
 - `model/`: Trained model artifacts.
 - `server.py`: Flask API implementation.
-- `train.py`: Model training script.
 - `experiments/`: Agentic implementations:
     - `01_groq_hello.py` & `02_groq_tool.py`: Groq-based agent tool integration.
     - `03_ollama_tool.py` & `05_ollama_real_tool.py`: Local agent integration via Ollama.
@@ -33,11 +32,6 @@ An implementation of AI agents that treat the Sentiment API as an external tool.
 ### Installation
 ```bash
 pip install -r requirements.txt
-```
-
-### Training
-```bash
-python train.py
 ```
 
 ### Running the API
